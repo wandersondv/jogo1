@@ -43,6 +43,7 @@ function start() { // Inicio da função start()
     moveinimigo1();
     moveinimigo2();
     moveamigo();
+    colisao();
 	
 	} // Fim da função loop()
 
@@ -146,10 +147,16 @@ function start() { // Inicio da função start()
                     podeAtirar=true;
                             
                            }
-            } // Fecha executaDisparo()
+        } // Fecha executaDisparo()
+
         } // Fecha disparo()
+        function colisao() {
+            var colisao1 = ($("#jogador").collision($("#inimigo1")));
+            // jogador com o inimigo1
+        
+            console.log(colisao1);
+        
+        } //Fim da função colisao()
         
         
-        
-    
 } // Fim da função start
